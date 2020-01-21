@@ -13,7 +13,7 @@ describe('MedicosComponent', () => {
     });
 
 
-    it('Init, debe cargar los medicos', () => {
+    it('Init: debe obtener a los medicos', () => {
         const medicos = ['medico1', 'medico2', 'medico3'];
 
         spyOn( servicio, 'getMedicos' ).and.callFake( () => {
