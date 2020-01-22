@@ -73,14 +73,13 @@ describe('MedicosComponent', () => {
 
     });
 
-  it('No debe llamar al servidor para borrar medico', () => {
-    spyOn(window, 'confirm').and.returnValue(false);
-    const espia = spyOn( servicio, 'borrarMedico' ).and.returnValue( EMPTY );
+    it('No debe llamar al servidor para borrar medico', () => {
+        spyOn(window, 'confirm').and.returnValue(false);
+        const espia = spyOn( servicio, 'borrarMedico' ).and.returnValue( EMPTY );
 
-    componente.borrarMedico('1');
+        componente.borrarMedico('1');
 
-    expect( espia ).not.toHaveBeenCalledWith('1');
-
-  });
+        expect( espia ).not.toHaveBeenCalledWith('1');
+    });
 
 });
